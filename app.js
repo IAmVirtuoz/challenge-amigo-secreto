@@ -28,3 +28,15 @@ function actualizarLista() {
         listaAmigos.appendChild(lista);
     } 
 }
+
+
+function elegirAmigoAleatorio() {
+    if (amigos.length != 0) {
+        let amigoAleatorio =  Math.floor(Math.random()*amigos.length+1);
+        let resultadoAmigo = document.getElementById("resultado");
+        resultadoAmigo.innerHTML = amigos[amigoAleatorio];
+    } else {
+        alert("Por favor, agregue a un amigo.");
+    }
+
+}
