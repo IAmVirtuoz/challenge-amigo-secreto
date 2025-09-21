@@ -9,10 +9,22 @@ function agregarAmigo() {
     } else {
         amigos.push(amigoAgregado);
         limpiarCaja();
+        actualizarLista();
         //console.log(amigos);
     }
 }
 
 function limpiarCaja() {
-    let valorCaja = document.getElementById('amigo').value = '';
+    document.getElementById('amigo').value = '';
+}
+
+function actualizarLista() {
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+
+    amigos.forEach(function(amigo) {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+        lista.appendChild(li);
+    })
 }
