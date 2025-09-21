@@ -1,5 +1,9 @@
+//Se crea un array de amigos
 let amigos = [];
 
+
+//Función para agregar un amigo al array "amigos"
+//Primero verifica que el input no esté vacío
 function agregarAmigo() {
     amigoAgregado = document.getElementById('amigo').value;
 
@@ -13,10 +17,13 @@ function agregarAmigo() {
     }
 }
 
+//Función para limpiar el input
 function limpiarCaja() {
     document.getElementById('amigo').value = '';
 }
 
+
+//Función para actualizar y mostrar la lista en HTML
 function actualizarLista() {
     let listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = "";
@@ -29,7 +36,7 @@ function actualizarLista() {
     } 
 }
 
-
+//Función para elegir un amigo aleatorio del array como amigo secreto
 function elegirAmigoAleatorio() {
     if (amigos.length != 0) {
         let amigoAleatorio =  Math.floor(Math.random()*amigos.length+1);
